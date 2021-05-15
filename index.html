@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Guess My Number!</title>
+</head>
+<body>
+    <div class="content" id="body">
+        <header class="header">
+            <div class="container">
+                <div class="header__againBtn" id="playAgain">
+                    <p class="header__againBtn__text">Again!</p>
+                </div>
+                <div class="header__rule">
+                    <p class="header__rule__text">(Between 1 and 20)</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="title">
+            <div class="container">
+                <h1 class="title__text">Guess My Number!</h1>
+            </div>
+        </section>
+
+        <section class="correctNumber">
+            <div class="container">
+                <span class="correctNumber__middleLine"></span>
+                <div class="correctNumber__content">
+                    <h1 class="correctNumber__content__text" id="correctNumber">?</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="main">
+            <div class="container">
+                <div class="main__checkNumber">
+                    <div class="main__checkNumber__border">
+                        <input type="number" class="main__checkNumber__border__input" id="value" required/>
+                    </div>
+                    <div class="main__checkNumber__click">
+                        <input type="button" class="main__checkNumber__click__input" value="Check!" id="check"/>
+                    </div>
+                </div>
+                <div class="main__info">
+                    <div class="main__info__first">
+                        <div class="main__info__first__icon">
+                            <img src="img/fireworks.svg" alt="" id="congratulation" />
+                        </div>
+                        <div class="main__info__first__highOrLow">
+                            <p class="main__info__first__highOrLow__text" id="hint">Start guessing...</p>
+                        </div>
+                    </div>
+                    <div class="main__info__second">
+                        <div class="main__info__second__score">
+                            <div class="main__info__second__score__icon">
+                                <p>💯</p>
+                            </div>
+                            <div class="main__info__second__score__textGroup">
+                                <p class="main__info__second__score__textGroup__text">Score: </p>
+                                <p class="main__info__second__score__textGroup__text" id="score">20</p>
+                            </div>
+                        </div>
+                        <div class="main__info__second__highScore">
+                            <div class="main__info__second__hightScore__icon">
+                                <p>🥇</p>
+                            </div>
+                            <div class="main__info__second__highScore__textGroup">
+                                <p class="main__info__second__highScore__textGroup__text">HighScore: </p>
+                                <p class="main__info__second__highScore__textGroup__text" id="highScore">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<script src="js/engine.js"></script>
+</body>
+</html>
