@@ -1,0 +1,57 @@
+@import 'responsive';
+.correctNumber{
+    @include displayFlex(row, center, stretch, 0);
+    height: 35%;
+
+    @include responsive(laptop){
+        height: 20%;
+    }
+
+    @media only screen and (max-height: 680px){
+        visibility: hidden;
+    }
+
+    .container{
+        @include displayFlex(row, center, center, 0);
+        @include size(100%, max-content);
+        position: relative;
+    }
+
+    &__middleLine{
+        position: absolute;
+        @include size(100%, 10px);
+        background: #fff;
+        z-index: 1;
+    }
+
+    &__content{
+        padding: 50px;
+        @include BAC(#fff, $primary-background);
+        font-size: 40px;
+        z-index: 4;
+
+        @include responsive(LGdesktop){
+            padding: 40px;
+            font-size: 35px;
+        }
+
+        @include responsive(desktop){
+            padding: 35px;
+            font-size: 30px;
+        }
+
+        @include responsive(laptop){
+            padding: 30px;
+        }
+
+        @include responsive(tablet){
+            padding: 25px;
+            font-size: 25px;
+        }
+
+        @include responsive(mobile){
+            padding: 20px;
+            font-size: 20px;
+        }
+    }
+}

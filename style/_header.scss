@@ -1,0 +1,38 @@
+@import 'responsive';
+
+.header{
+    @include displayFlex(row, center, center, 0);
+    align-items: center;
+    height: 10%;
+
+    @include responsive(LGdesktop){
+        height: 15%;
+    }
+
+    @include responsive(tablet){
+        font-size: 15px;
+    }
+
+    .container{
+        @include displayFlex(row, space-between, center, 0);
+
+        @include responsive(mobile){
+            @include displayFlex(column, flex-start, center, 20px);
+        }
+    }
+
+    &__againBtn{
+        @include BAC(#fff, #000);
+        padding: 20px 30px;
+        text-align: center;
+        cursor: pointer;
+
+        @include responsive(tablet){
+            padding: 15px 20px;
+        }
+
+        @include responsive(mobile){
+            width: 100%;
+        }
+    }
+}

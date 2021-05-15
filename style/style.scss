@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import 'config';
+@import 'header';
+@import 'title';
+@import 'correctNumber';
+@import 'main';
+@import 'responsive';
+
+*{
+    @include MAP(0, 0);
+    box-sizing: border-box;
+}
+
+body{
+    @include BAC($primary-background, #fff);
+    font-family: 'Press Start 2P', cursive;
+}
+
+.content{
+    @include displayFlex(column, space-between, stretch, 80px);
+    @include size(60%, 100vh);
+    margin: auto;
+    border: 5px solid #fff;
+
+    @include responsive(LGdesktop){
+        gap: 60px;
+        width: 70%;
+    }
+
+    @include responsive(desktop){
+        gap: 40px;
+        width: 100%;
+    }
+
+    @include responsive(tablet){
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    @media only screen and(max-height: 500px){
+        min-height: 100vh;
+        height: auto;
+    }
+}
+
+section{
+    @include size(100%, auto);
+}
+
+.container{
+    @include size(90%, 100%);
+
+    @include responsive(mobile){
+        width: 100%;
+    }
+}
+
+input:focus{
+    outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

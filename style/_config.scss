@@ -1,0 +1,46 @@
+$primary-background :  #202124;
+
+
+@mixin displayFlex($flexDirection, $justifyContent, $alignItems, $gap) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    gap: $gap;
+}
+
+@mixin displayGrid($templateColumns, $templateRows, $gap) {
+    display: grid;
+    grid-template-columns: $templateColumns;
+    grid-template-rows: $templateRows;
+    grid-gap: $gap;
+}
+
+@mixin setPosition($position, $left, $top, $right, $bottom) {
+    position: $position;
+    left: $left;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+}
+
+@mixin fontRules($fontSize, $fontWeight, $fontFamily) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    font-family: $fontFamily;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin MAP($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin BAC($background, $color){
+    background: $background;
+    color: $color;
+}
